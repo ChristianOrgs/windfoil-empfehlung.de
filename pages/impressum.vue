@@ -13,20 +13,23 @@
           <h2 class="font-heading font-bold text-navy text-xl mb-3">Angaben gemäß § 5 TMG</h2>
           <div class="bg-sky rounded-xl p-5 space-y-1">
             <p class="font-semibold text-navy">wingfoil-empfehlung.de</p>
-            <p>[Betreiber – Angaben folgen]</p>
-            <p>[Adresse – Angaben folgen]</p>
-            <p>[PLZ, Ort – Angaben folgen]</p>
+            <p>Shopfabrik Berlin GmbH</p>
+            <p>Friedrichstraße 155</p>
+            <p>10117 Berlin</p>
           </div>
         </div>
 
         <div>
           <h2 class="font-heading font-bold text-navy text-xl mb-3">Kontakt</h2>
-          <p>E-Mail: [kontakt@wingfoil-empfehlung.de – Angaben folgen]</p>
+          <p>E-Mail: info@wingfoil-empfehlung.de</p>
         </div>
 
         <div>
           <h2 class="font-heading font-bold text-navy text-xl mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-          <p>[Name und Adresse des Verantwortlichen – Angaben folgen]</p>
+          <p>Christian Lobenstein</p>
+          <p>Shopfabrik Berlin GmbH</p>
+            <p>Friedrichstraße 155</p>
+            <p>10117 Berlin</p>
         </div>
 
         <div>
