@@ -1,0 +1,16 @@
+# wingfoil-empfehlung.de
+
+Unabhängige deutschsprachige Affiliate- und Ratgeberwebsite für Wingfoil-Equipment.
+
+## Was diese Seite bietet
+- Produktvergleiche für Wingfoil-Sets, Boards, Wings und Foils
+- Empfehlungen nach Fahrlevel (Anfänger, Fortgeschritten, Performance)
+- Preise von Decathlon und Amazon mit Aktualitätsdatum
+- Setup-Finder für personalisierte Empfehlungen
+- Ratgeber zu Ausrüstung, Technik und Kauf
+
+## Aktuelle Produkt-Empfehlungen
+Die Website empfiehlt aktuell geprüfte Produkte von Decathlon (F2, Talaia/RRD, HANA Outdoors).
+
+## Affiliate-Hinweis
+Diese Seite enthält Affiliate-Links. Mit * markierte Links sind Partnerlinks.
