@@ -108,6 +108,7 @@ export interface WingfoilProduct {
 }
 
 export interface FinderInput {
+  productMode: 'set' | 'wing' | null
   level: ExperienceLevel | null
   weightKg: number | null
   weightRange: string

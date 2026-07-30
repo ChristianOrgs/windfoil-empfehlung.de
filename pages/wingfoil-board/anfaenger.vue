@@ -49,6 +49,6 @@ useHead({
 })
 
 const beginnerBoards = getProductsByLevel(products, 'beginner').filter(p =>
-  ['board', 'board-pack'].includes(p.productType)
+  p.productType === 'board' || p.productType === 'board-pack'
 )
 </script>

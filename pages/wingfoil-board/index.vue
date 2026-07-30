@@ -21,12 +21,25 @@
         <div class="flex items-center gap-3 mb-6">
           <div class="w-2 h-8 bg-ocean rounded-full"></div>
           <h2 class="font-heading font-bold text-navy text-2xl">Aufblasbare Boards</h2>
+          <span class="text-sm text-muted bg-sky px-2 py-0.5 rounded-full">Empfohlen für Einsteiger</span>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <ProductCard v-for="p in inflatable" :key="p.id" :product="p" />
           <div v-if="inflatable.length < 3" class="bg-sky border-2 border-dashed border-border rounded-2xl flex items-center justify-center p-8 text-center text-muted">
             <p class="text-sm">Weitere Empfehlung folgt nach redaktioneller Prüfung.</p>
           </div>
+        </div>
+      </section>
+
+      <!-- Hardboard section -->
+      <section v-if="hardboard.length > 0">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-2 h-8 bg-blue rounded-full"></div>
+          <h2 class="font-heading font-bold text-navy text-2xl">Hardboards</h2>
+          <span class="text-sm text-muted bg-sky px-2 py-0.5 rounded-full">Für Fortgeschrittene</span>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ProductCard v-for="p in hardboard" :key="p.id" :product="p" />
         </div>
       </section>
 
@@ -73,7 +86,7 @@ useHead({
 })
 
 const published = getPublishedProducts(products)
-const inflatable = published.filter(p =>
-  ['board', 'board-pack'].includes(p.productType) && p.board?.construction === 'inflatable'
-)
+const boardOnly = published.filter(p => p.productType === 'board' || p.productType === 'board-pack')
+const inflatable = boardOnly.filter(p => p.board?.construction === 'inflatable')
+const hardboard = boardOnly.filter(p => p.board?.construction === 'hardboard')
 </script>

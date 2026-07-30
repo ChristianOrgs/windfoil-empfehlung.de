@@ -158,6 +158,14 @@
         </div>
       </section>
 
+      <!-- Related products -->
+      <section v-if="related.length" class="border-t border-border pt-12 mb-12">
+        <h2 class="font-heading font-bold text-navy text-2xl mb-6">Weitere Empfehlungen</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ProductCard v-for="p in related" :key="p.id" :product="p" />
+        </div>
+      </section>
+
       <!-- Editorial info -->
       <section class="border-t border-border pt-8">
         <div class="flex flex-wrap gap-6 text-xs text-muted">
@@ -195,6 +203,13 @@ const product = computed(() =>
 )
 
 const primaryOffer = computed(() => product.value ? getPrimaryOffer(product.value) : undefined)
+
+const related = computed(() => {
+  if (!product.value) return []
+  return products
+    .filter(p => p.published && p.researchStatus !== 'inactive' && p.productType === product.value!.productType && p.id !== product.value!.id)
+    .slice(0, 3)
+})
 
 const breadcrumbs = computed(() => {
   if (!product.value) return []

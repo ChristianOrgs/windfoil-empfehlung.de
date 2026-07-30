@@ -12,7 +12,7 @@ export function getFinderRecommendation(input: FinderInput): FinderRecommendatio
   let wingSizeMax = 6
   let foilAreaMin = 1400
   let foilAreaMax = 2000
-  let preferredConstruction: 'inflatable' | 'hardboard' | 'any' = 'inflatable'
+  let preferredConstruction: 'inflatable' | 'hardboard' | 'any' = 'any'
   const explanation: string[] = []
 
   // Volume by weight
@@ -74,23 +74,34 @@ export function getFinderRecommendation(input: FinderInput): FinderRecommendatio
   }
 }
 
+export function matchWings(input: FinderInput) {
+  const published = getPublishedProducts(products).filter(p => p.productType === 'wing')
+  return published.filter(p => {
+    if (input.level && !p.levels.includes(input.level)) return false
+    return true
+  })
+}
+
 export function matchProducts(input: FinderInput, rec: FinderRecommendation) {
   const published = getPublishedProducts(products).filter(p =>
     ['complete-set', 'board-pack'].includes(p.productType)
   )
 
-  return published.filter(p => {
-    const vol = p.board?.volumeLitres
-    if (!vol) return false
-    if (vol < rec.boardVolumeMin - 20 || vol > rec.boardVolumeMax + 20) return false
+  const idealVol = (rec.boardVolumeMin + rec.boardVolumeMax) / 2
 
-    if (rec.preferredConstruction !== 'any' && p.board?.construction !== rec.preferredConstruction) return false
-
-    if (input.level && !p.levels.includes(input.level)) return false
-
-    const price = p.offers[0]?.currentPrice
-    if (input.budgetMax && price && price > input.budgetMax) return false
-
-    return true
-  }).slice(0, 3)
+  return published
+    .filter(p => {
+      const vol = p.board?.volumeLitres
+      if (!vol) return false
+      if (vol < rec.boardVolumeMin - 20 || vol > rec.boardVolumeMax + 20) return false
+      if (rec.preferredConstruction !== 'any' && p.board?.construction !== rec.preferredConstruction) return false
+      if (input.level && !p.levels.includes(input.level)) return false
+      return true
+    })
+    .sort((a, b) => {
+      const da = Math.abs((a.board?.volumeLitres ?? 0) - idealVol)
+      const db = Math.abs((b.board?.volumeLitres ?? 0) - idealVol)
+      return da - db
+    })
+    .slice(0, 6)
 }

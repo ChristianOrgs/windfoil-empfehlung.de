@@ -66,6 +66,7 @@ useHead({
 })
 
 const inflatableBoards = getPublishedProducts(products).filter(p =>
-  ['board', 'board-pack'].includes(p.productType) && p.board?.construction === 'inflatable'
+  (p.productType === 'board' || p.productType === 'board-pack') &&
+  p.board?.construction === 'inflatable'
 )
 </script>

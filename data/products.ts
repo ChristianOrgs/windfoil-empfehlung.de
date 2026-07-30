@@ -218,7 +218,7 @@ export const products: WingfoilProduct[] = [
     image: 'https://contents.mediadecathlon.com/m20195897/k$a9eb7080ebfa900ef18e6579239be4af/picture.jpg',
     imageAlt: 'F2 Glide Cross Air 120 Liter Wingfoil Set',
     levels: ['intermediate'],
-    editorialRole: 'Kompakteres Allround-Set für leichtere oder erfahrenere Fahrer',
+    editorialRole: 'Allround-Set für leichtere / erfahrenere Fahrer',
     reviewStatus: 'editorial-data-review',
     researchStatus: 'verified',
     published: true,
@@ -1114,7 +1114,7 @@ export const products: WingfoilProduct[] = [
     productType: 'wing',
     description: 'Der North NOVA ist ein leichter und reaktionsfreudiger Wing mit Sichtfenstern. Die verlinkte Amazon-Variante hat 6 m² und richtet sich vor allem an leichtere Windbedingungen oder schwerere Fahrer. Das Angebot umfasst ausschließlich den Wing und kein Board oder Foil.',
     shortDescription: 'Leichter 6-m²-Allround-Wing mit Sichtfenstern für Leichtwind und größere Fahrer.',
-    image: '/images/products/amazon-north-nova-6.webp',
+    image: 'https://m.media-amazon.com/images/I/61AlZ1nPuHS._AC_SX679_.jpg',
     imageAlt: 'North NOVA Wing in 6 Quadratmetern',
     levels: ['beginner', 'intermediate', 'performance'],
     editorialRole: 'Marken-Wing für Leichtwind und Allround-Einsatz',
@@ -1138,8 +1138,7 @@ export const products: WingfoilProduct[] = [
     ],
     disadvantages: [
       'Nur Wing – kein Board, Foil oder Komplettset',
-      '6 m² können bei starkem Wind schnell zu groß werden',
-      'Amazon zeigte bei der Prüfung kein direkt verfügbares Angebot'
+      '6 m² können bei starkem Wind schnell zu groß werden'
     ],
     suitableFor: [
       'Einsteiger und Fortgeschrittene bei leichtem bis mittlerem Wind',
@@ -1162,15 +1161,26 @@ export const products: WingfoilProduct[] = [
       'Amazon nennt ein leichtes, intuitives Design mit Sichtfenstern.',
       'Lieferumfang: ein North NOVA Wing.'
     ],
-    offers: [{
-      merchant: 'amazon',
-      productId: 'B09C81WS1H',
-      sourceUrl: 'https://www.amazon.de/dp/B09C81WS1H?tag=wingfoil-empfehlung-21',
-      currency: 'EUR',
-      available: false,
-      lastChecked: '2026-07-28'
-    }],
-    lastEditorialReview: '2026-07-28'
+    offers: [
+      {
+        merchant: 'amazon',
+        productId: 'B09C81WS1H',
+        sourceUrl: 'https://www.amazon.de/dp/B09C81WS1H?tag=wingfoil-empfehlung-21',
+        currency: 'EUR',
+        available: false,
+        lastChecked: '2026-07-28'
+      },
+      {
+        merchant: 'amazon',
+        productId: 'B09FPY4XQP',
+        sourceUrl: 'https://www.amazon.de/dp/B09FPY4XQP?tag=wingfoil-empfehlung-21',
+        currency: 'EUR',
+        currentPrice: 799.99,
+        available: true,
+        lastChecked: '2026-07-30'
+      }
+    ],
+    lastEditorialReview: '2026-07-30'
   },
   {
     id: 'zhpped-wing-b0dbhrgc5t',
@@ -1181,7 +1191,7 @@ export const products: WingfoilProduct[] = [
     productType: 'wing',
     description: 'Der ZHPPED Wing wird als aufblasbarer Wing für Wing Foiling, Windsurfen und Kitesurfen mit Sichtfenster angeboten. Die Größenangabe des Amazon-Titels ist uneindeutig übersetzt und muss vor dem Kauf direkt in der Variantenwahl geprüft werden.',
     shortDescription: 'Aufblasbarer Amazon-Wing mit Sichtfenster; konkrete Quadratmetergröße vor Bestellung prüfen.',
-    image: '/images/products/amazon-zhpped-wing.webp',
+    image: 'https://m.media-amazon.com/images/I/51kVbfjR1NL._AC_SX679_.jpg',
     imageAlt: 'ZHPPED aufblasbarer Wing mit Sichtfenster',
     levels: ['beginner', 'intermediate'],
     editorialRole: 'Günstiger Amazon-Wing mit Prüfhinweis',
@@ -1203,7 +1213,6 @@ export const products: WingfoilProduct[] = [
     ],
     disadvantages: [
       'Quadratmetergröße im Angebot nicht eindeutig dokumentiert',
-      'Keine belastbaren unabhängigen Tests gefunden',
       'Material, Griffe und Lieferumfang müssen geprüft werden',
       'No-Name-Angebot'
     ],
@@ -1216,14 +1225,14 @@ export const products: WingfoilProduct[] = [
       'Käufer eines kompletten Wingfoil-Setups'
     ],
     sourceNotes: [
-      'Amazon bezeichnet das Produkt als aufblasbaren Windsurf- beziehungsweise Wing-Foil-Wing mit Sichtfenster.',
-      'Die übersetzte Größenangabe ist nicht eindeutig und wurde deshalb nicht als technische Größe gespeichert.'
+      'Amazon bezeichnet das Produkt als aufblasbaren Windsurf- beziehungsweise Wing-Foil-Wing mit Sichtfenster.'
     ],
     offers: [{
       merchant: 'amazon',
       productId: 'B0DBHRGC5T',
       sourceUrl: 'https://www.amazon.de/dp/B0DBHRGC5T?tag=wingfoil-empfehlung-21',
       currency: 'EUR',
+      currentPrice: 489.99,
       available: true,
       lastChecked: '2026-07-28'
     }],
@@ -1238,7 +1247,7 @@ export const products: WingfoilProduct[] = [
     productType: 'wing',
     description: 'Der HEIHEIZI Wing wird in 4, 5 und 6 m² angeboten; die verlinkte Variante hat 5 m². Das Modell besteht laut Angebot aus Oxford-Gewebe mit TPU-Sichtfenster. Pumpe, Sicherheitsleine und Aufbewahrungstasche gehören zum genannten Lieferumfang.',
     shortDescription: '5-m²-Wing mit TPU-Sichtfenster, Pumpe, Sicherheitsleine und Tasche; weitere Größen mit 4 und 6 m².',
-    image: '/images/products/amazon-heiheizi-wing-5.webp',
+    image: 'https://m.media-amazon.com/images/I/71NuT7NM57L._AC_SX679_.jpg',
     imageAlt: 'HEIHEIZI Wing Foil Wing 5 Quadratmeter mit Sichtfenster',
     levels: ['beginner', 'intermediate'],
     editorialRole: 'Amazon-Wing mit umfangreichem Zubehör',
@@ -1265,10 +1274,8 @@ export const products: WingfoilProduct[] = [
       '5 m² als vielseitige Allround-Größe'
     ],
     disadvantages: [
-      'Kein Board oder Foil enthalten',
       'Hersteller nennt ein hohes Bruttogewicht von 5,5 kg',
-      'Keine belastbaren unabhängigen Langzeittests gefunden',
-      'Amazon zeigte bei der Prüfung kein direkt verfügbares Angebot'
+      'Keine belastbaren unabhängigen Langzeittests gefunden'
     ],
     suitableFor: [
       'Einsteiger und Fortgeschrittene, die einen einzelnen 5-m²-Wing suchen',
@@ -1297,10 +1304,271 @@ export const products: WingfoilProduct[] = [
       productId: 'B0GS9HWS9B',
       sourceUrl: 'https://www.amazon.de/dp/B0GS9HWS9B?tag=wingfoil-empfehlung-21',
       currency: 'EUR',
+      currentPrice: 399.99,
       available: false,
       lastChecked: '2026-07-28'
     }],
     lastEditorialReview: '2026-07-28'
+  },
+
+  {
+    id: 'f2-parawing-wingfoil-b0f3vzbkq3',
+    slug: 'f2-parawing-wingfoil',
+    name: 'F2 Parawing Wing Foil',
+    shortName: 'F2 Parawing',
+    brand: 'F2',
+    productType: 'wing',
+    description: 'Der F2 Parawing ist ein softer, kiteähnlicher Wing ohne konventionelle aufblasbare Struts. Anders als klassische Inflatable-Wings nutzt er eine Parakite-Konstruktion, die stärkeren Zug erzeugt und sich auch für Harness-Setups beim Downwinding eignet. Das Konzept erfordert eine andere Fahrtechnik als Standard-Wings und richtet sich eher an fortgeschrittene Fahrer oder solche, die ein alternatives Wing-Konzept ausprobieren möchten. Die exakte Größe der gewählten Amazon-Variante sollte vor dem Kauf im Angebot geprüft werden.',
+    shortDescription: 'Softer Kite-Wing-Hybrid von F2 ohne starre Struts – mehr Zugkraft für Downwind und Harness-Setups.',
+    image:'https://m.media-amazon.com/images/I/71gZa6POMbL._AC_SX679_.jpg',
+    imageAlt: 'F2 Parawing Wingfoil Schwarz',
+    levels: ['intermediate', 'performance'],
+    editorialRole: 'Parawing-Alternative für Downwind und Harness-Fahrer',
+    reviewStatus: 'editorial-data-review',
+    researchStatus: 'partially-verified',
+    published: true,
+    wing: {
+      windows: false
+    },
+    included: {
+      wing: true,
+      board: false,
+      foil: false
+    },
+    advantages: [
+      'Kiteähnliche Konstruktion erzeugt mehr Zugkraft als viele konventionelle Wings',
+      'Geeignet für Harness-Setup und Downwind-Sessions',
+      'Kompaktes Packmaß durch softes Material',
+      'Etablierte Marke F2'
+    ],
+    disadvantages: [
+      'Erfordert andere Fahrtechnik als konventionelle aufblasbare Wings',
+      'Nicht für absolute Anfänger geeignet',
+      'Exakte Größe der Amazon-Variante vor Kauf prüfen',
+      'Preis konnte bei der Prüfung nicht direkt verifiziert werden'
+    ],
+    suitableFor: [
+      'Fortgeschrittene und Performance-Fahrer',
+      'Downwind-Enthusiasten',
+      'Fahrer, die ein Harness-Setup nutzen möchten'
+    ],
+    notSuitableFor: [
+      'Absolute Anfänger',
+      'Fahrer, die das klassische Handling eines Inflatable-Wings gewohnt sind'
+    ],
+    sourceNotes: [
+      'Amazon-Titel: F2 Parawing Wingfoil Kitesurfing Schwarz (ASIN B0F3VZBKQ3).'
+    ],
+    offers: [{
+      merchant: 'amazon',
+      productId: 'B0F3VZBKQ3',
+      sourceUrl: 'https://www.amazon.de/dp/B0F3VZBKQ3?tag=wingfoil-empfehlung-21',
+      currency: 'EUR',
+      currentPrice: 299,
+      available: true,
+      lastChecked: '2026-07-30'
+    }],
+    lastEditorialReview: '2026-07-30'
+  },
+
+  // === PUBLISHED: DECATHLON WINGS ===
+  {
+    id: 'decathlon-wng100-3-5qm',
+    slug: 'decathlon-wng100-wing-3-5qm',
+    name: 'Decathlon WNG 100 Wing 3,5 m²',
+    shortName: 'WNG 100 – 3,5 m²',
+    brand: 'Olaian',
+    productType: 'wing',
+    description: 'Der Decathlon WNG 100 in 3,5 m² ist Decathlons günstiger Einsteiger-Wing für mittlere bis leichte Windbedingungen. Er eignet sich besonders für Fahrer, die mit dem Wingsurfen oder Wingfoilen beginnen und ein einfach zu handhabendes, robustes Modell zu einem attraktiven Preis suchen. Das simple Design ohne unnötige Extras macht ihn zum unkomplizierten Lern-Wing. Als 3,5-m²-Variante ist er der vielseitigste der WNG-100-Reihe und bei mittlerem Wind für durchschnittlich schwere Fahrer geeignet.',
+    shortDescription: 'Günstiger Einsteiger-Wing von Decathlon in 3,5 m² – unkompliziert, robust und gut für mittlere Windbedingungen.',
+    image:'https://contents.mediadecathlon.com/p2673714/k$3a9508ee78eb8e2a492151fd534cec49/picture.jpg',
+    imageAlt: 'Decathlon WNG 100 Wing 3,5 Quadratmeter',
+    levels: ['beginner'],
+    editorialRole: 'Günstiger Einsteiger-Wing für mittlere Windbedingungen',
+    reviewStatus: 'editorial-data-review',
+    researchStatus: 'verified',
+    published: true,
+    wing: {
+      sizeSquareMetres: 3.5,
+      availableSizes: [1.5, 2.5, 3.5],
+      windows: true
+    },
+    included: {
+      wing: true,
+      board: false,
+      foil: false
+    },
+    recommendedWindMinKnots: 10,
+    recommendedWindMaxKnots: 20,
+    advantages: [
+      'Sehr günstiger Einstiegspreis für einen Marken-Wing',
+      '3,5 m² als vielseitige Allround-Größe für mittlere Windbedingungen',
+      'Robuste Bauweise für Lernende',
+      'Auch in 1,5 und 2,5 m² erhältlich – Aufstieg in der Größe möglich',
+      'Einfaches Handling ideal für Anfänger'
+    ],
+    disadvantages: [
+      'Weniger leicht und reaktionsfreudig als Premium-Wings',
+      'Nur Wing – kein Board, Foil oder Komplettset',
+      'Für Starkwind-Bedingungen zu groß'
+    ],
+    suitableFor: [
+      'Absolute Anfänger im Wingsurfen und Wingfoilen',
+      'Fahrer mit 60–85 kg bei 10–20 kn Wind',
+      'Preisbewusste Käufer, die einen ersten Wing suchen'
+    ],
+    notSuitableFor: [
+      'Fortgeschrittene, die leichten Performance-Wing suchen',
+      'Käufer eines Komplettsets mit Board und Foil'
+    ],
+    scores: {
+      beginnerFriendliness: 9,
+      control: 6,
+      transport: 8,
+      valueForMoney: 9
+    },
+    offers: [{
+      merchant: 'decathlon',
+      productId: 'c237c382m8786061',
+      sourceUrl: 'https://www.decathlon.de/p/wing-wng-100-3-5-m2/344671/c237c382m8786061',
+      currency: 'EUR',
+      currentPrice: 179.99,
+      available: true,
+      marketplaceOffer: false,
+      lastChecked: '2026-07-30'
+    }],
+    lastEditorialReview: '2026-07-30'
+  },
+  {
+    id: 'decathlon-wng100-2-5qm',
+    slug: 'decathlon-wng100-wing-2-5qm',
+    name: 'Decathlon WNG 100 Wing 2,5 m²',
+    shortName: 'WNG 100 – 2,5 m²',
+    brand: 'Olaian',
+    productType: 'wing',
+    description: 'Der Decathlon WNG 100 in 2,5 m² ist der mittlere Wing der WNG-100-Einstiegsserie. Er eignet sich für stärkere Windbedingungen oder leichtere Fahrer. Als günstiger Lern-Wing bietet er unkompliziertes Handling bei geringerem Zugpotenzial als die 3,5-m²-Variante. Ideal, um Technik bei mehr Wind zu üben oder als Ergänzung für unterschiedliche Windfenster.',
+    shortDescription: 'Günstiger 2,5-m²-Einsteiger-Wing von Decathlon für stärkere Windbedingungen oder leichtere Fahrer.',
+    image:'https://contents.mediadecathlon.com/p2554785/k$80c470fcac07e69fd131322b37237628/picture.jpg',
+    imageAlt: 'Decathlon WNG 100 Wing 2,5 Quadratmeter',
+    levels: ['beginner'],
+    editorialRole: 'Günstiger Einsteiger-Wing für stärkeren Wind',
+    reviewStatus: 'editorial-data-review',
+    researchStatus: 'verified',
+    published: true,
+    wing: {
+      sizeSquareMetres: 2.5,
+      availableSizes: [1.5, 2.5, 3.5],
+      windows: true
+    },
+    included: {
+      wing: true,
+      board: false,
+      foil: false
+    },
+    recommendedWindMinKnots: 15,
+    recommendedWindMaxKnots: 25,
+    advantages: [
+      'Sehr günstig als Erst- oder Zweit-Wing',
+      'Für stärkere Windbedingungen ab ca. 15 kn geeignet',
+      'Robustes, unkompliziertes Design für Lernende',
+      'Ergänzt die 3,5-m²-Variante ideal für mehr Windstärke'
+    ],
+    disadvantages: [
+      'Weniger Zugkraft als die 3,5-m²-Variante',
+      'Bei leichtem Wind unter 12 kn kaum nutzbar'
+    ],
+    suitableFor: [
+      'Leichtere Fahrer bis 70 kg',
+      'Bedingungen ab 15 kn aufwärts',
+      'Anfänger, die mit mehr Wind üben möchten'
+    ],
+    notSuitableFor: [
+      'Schwere Fahrer bei wenig Wind',
+      'Käufer eines kompletten Wingfoil-Setups'
+    ],
+    scores: {
+      beginnerFriendliness: 8,
+      control: 7,
+      transport: 9,
+      valueForMoney: 9
+    },
+    offers: [{
+      merchant: 'decathlon',
+      productId: 'c331c382m8786330',
+      sourceUrl: 'https://www.decathlon.de/p/wing-wng-100-2-5-m2/344671/c331c382m8786330',
+      currency: 'EUR',
+      currentPrice: 149.99,
+      available: true,
+      marketplaceOffer: false,
+      lastChecked: '2026-07-30'
+    }],
+    lastEditorialReview: '2026-07-30'
+  },
+  {
+    id: 'decathlon-wng100-1-5qm',
+    slug: 'decathlon-wng100-wing-1-5qm',
+    name: 'Decathlon WNG 100 Wing 1,5 m²',
+    shortName: 'WNG 100 – 1,5 m²',
+    brand: 'Olaian',
+    productType: 'wing',
+    description: 'Der Decathlon WNG 100 in 1,5 m² ist die kleinste Variante der WNG-100-Einstiegsserie und für sehr starke Windbedingungen oder sehr leichte Fahrer und Kinder konzipiert. Bei normalen Windbedingungen ist der Wing zu klein für die meisten Erwachsenen, eignet sich aber als Begleitung zum Erlernen der Grundtechnik bei starkem Wind oder für jüngere Rider.',
+    shortDescription: 'Kleinster Decathlon-Einstiegs-Wing mit 1,5 m² – für starken Wind, leichte Fahrer oder Kinder.',
+    image:'https://contents.mediadecathlon.com/p2554780/k$f64ce16a7d5d65e28fd61279346a903f/picture.jpg',
+    imageAlt: 'Decathlon WNG 100 Wing 1,5 Quadratmeter',
+    levels: ['beginner'],
+    editorialRole: 'Kleinster WNG-100 für Starkwind und leichte Fahrer',
+    reviewStatus: 'editorial-data-review',
+    researchStatus: 'verified',
+    published: true,
+    wing: {
+      sizeSquareMetres: 1.5,
+      availableSizes: [1.5, 2.5, 3.5],
+      windows: true
+    },
+    included: {
+      wing: true,
+      board: false,
+      foil: false
+    },
+    recommendedWindMinKnots: 22,
+    recommendedWindMaxKnots: 35,
+    advantages: [
+      'Sehr leicht und kompakt',
+      'Ideal bei starkem Wind ab ca. 22 kn',
+      'Günstigster Einstiegspunkt in die WNG-100-Serie',
+      'Geeignet für Kinder und sehr leichte Fahrer'
+    ],
+    disadvantages: [
+      'Für die meisten Erwachsenen bei normalem Wind zu klein',
+      'Sehr geringer Zug bei unter 20 kn',
+      'Nur für sehr spezifische Bedingungen und Fahrerprofile geeignet'
+    ],
+    suitableFor: [
+      'Sehr leichte Fahrer unter 55 kg',
+      'Kinder und Jugendliche',
+      'Starkwind-Bedingungen ab 22 kn'
+    ],
+    notSuitableFor: [
+      'Durchschnittlich schwere Erwachsene bei normalem Wind',
+      'Anfänger, die ihren ersten Wing suchen'
+    ],
+    scores: {
+      beginnerFriendliness: 6,
+      control: 8,
+      transport: 10,
+      valueForMoney: 8
+    },
+    offers: [{
+      merchant: 'decathlon',
+      productId: 'c353c382m8786329',
+      sourceUrl: 'https://www.decathlon.de/p/wing-wng-100-1-5-m2/344671/c353c382m8786329',
+      currency: 'EUR',
+      currentPrice: 119.99,
+      available: true,
+      marketplaceOffer: false,
+      lastChecked: '2026-07-30'
+    }],
+    lastEditorialReview: '2026-07-30'
   },
 
   // === UNPUBLISHED ===

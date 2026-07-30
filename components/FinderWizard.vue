@@ -2,7 +2,7 @@
   <div class="max-w-2xl mx-auto">
     <FinderProgress :current="step" :total="totalSteps" />
 
-    <!-- Step 1: Level -->
+    <!-- Step 1: Level (both modes) -->
     <div v-if="step === 1" class="space-y-4">
       <h2 class="font-heading font-bold text-navy text-2xl">Wie ist dein Wingfoil-Level?</h2>
       <div class="grid gap-3">
@@ -22,8 +22,8 @@
       </div>
     </div>
 
-    <!-- Step 2: Weight -->
-    <div v-else-if="step === 2" class="space-y-4">
+    <!-- SET: Step 2 – Weight -->
+    <div v-else-if="step === 2 && productMode === 'set'" class="space-y-4">
       <h2 class="font-heading font-bold text-navy text-2xl">Wie viel wiegst du?</h2>
       <div class="grid grid-cols-2 gap-3">
         <button
@@ -50,25 +50,8 @@
       </div>
     </div>
 
-    <!-- Step 3: Experience -->
-    <div v-else-if="step === 3" class="space-y-4">
-      <h2 class="font-heading font-bold text-navy text-2xl">Welche Vorerfahrung hast du?</h2>
-      <p class="text-sm text-muted">Mehrfachauswahl möglich</p>
-      <div class="grid grid-cols-2 gap-3">
-        <button
-          v-for="exp in experienceOptions"
-          :key="exp.value"
-          class="p-3 rounded-xl border-2 transition-all text-sm text-left font-medium"
-          :class="input.previousExperience.includes(exp.value) ? 'border-ocean bg-sky text-navy' : 'border-border text-muted hover:border-ocean/50'"
-          @click="toggleExperience(exp.value)"
-        >
-          {{ exp.label }}
-        </button>
-      </div>
-    </div>
-
-    <!-- Step 4: Wind -->
-    <div v-else-if="step === 4" class="space-y-4">
+    <!-- SET: Step 3 / WING: Step 2 – Wind -->
+    <div v-else-if="(step === 3 && productMode === 'set') || (step === 2 && productMode === 'wing')" class="space-y-4">
       <h2 class="font-heading font-bold text-navy text-2xl">Welche Windbedingungen hast du typischerweise?</h2>
       <div class="grid gap-3">
         <button
@@ -80,39 +63,6 @@
         >
           <div class="font-semibold text-navy">{{ opt.label }}</div>
           <div class="text-sm text-muted">{{ opt.desc }}</div>
-        </button>
-      </div>
-    </div>
-
-    <!-- Step 5: Transport -->
-    <div v-else-if="step === 5" class="space-y-4">
-      <h2 class="font-heading font-bold text-navy text-2xl">Transport und Lagerung?</h2>
-      <div class="grid gap-3">
-        <button
-          v-for="opt in transportOptions"
-          :key="opt.value"
-          class="p-4 rounded-xl border-2 transition-all text-left"
-          :class="input.transportPreference === opt.value ? 'border-ocean bg-sky' : 'border-border hover:border-ocean/50'"
-          @click="input.transportPreference = opt.value"
-        >
-          <div class="font-semibold text-navy">{{ opt.label }}</div>
-          <div class="text-sm text-muted">{{ opt.desc }}</div>
-        </button>
-      </div>
-    </div>
-
-    <!-- Step 6: Budget -->
-    <div v-else-if="step === 6" class="space-y-4">
-      <h2 class="font-heading font-bold text-navy text-2xl">Welches Budget hast du?</h2>
-      <div class="grid grid-cols-2 gap-3">
-        <button
-          v-for="opt in budgetOptions"
-          :key="opt.range"
-          class="p-4 rounded-xl border-2 transition-all text-left"
-          :class="input.budgetRange === opt.range ? 'border-ocean bg-sky' : 'border-border hover:border-ocean/50'"
-          @click="selectBudget(opt)"
-        >
-          <div class="font-semibold text-navy">{{ opt.label }}</div>
         </button>
       </div>
     </div>
@@ -153,6 +103,7 @@ import type { ExperienceLevel } from '~/types'
 const props = defineProps<{
   step: number
   totalSteps: number
+  productMode: 'set' | 'wing'
   input: any
 }>()
 
@@ -201,11 +152,19 @@ const transportOptions = [
   { value: 'any' as const, label: 'Keine Präferenz', desc: 'Transport ist kein Entscheidungskriterium' }
 ]
 
-const budgetOptions = [
+const setBudgetOptions = [
   { range: 'lt1000', label: 'Unter 1.000 €', max: 999 as number | null },
   { range: '1000-1400', label: '1.000–1.400 €', max: 1400 as number | null },
   { range: '1400-2000', label: '1.400–2.000 €', max: 2000 as number | null },
   { range: 'gt2000', label: 'Über 2.000 €', max: null as number | null },
+  { range: 'open', label: 'Noch offen', max: null as number | null }
+]
+
+const wingBudgetOptions = [
+  { range: 'lt150', label: 'Unter 150 €', max: 149 as number | null },
+  { range: '150-300', label: '150–300 €', max: 300 as number | null },
+  { range: '300-500', label: '300–500 €', max: 500 as number | null },
+  { range: 'gt500', label: 'Über 500 €', max: null as number | null },
   { range: 'open', label: 'Noch offen', max: null as number | null }
 ]
 
@@ -215,7 +174,7 @@ const selectWeight = (opt: typeof weightOptions[0]) => {
   nextStep()
 }
 
-const selectBudget = (opt: typeof budgetOptions[0]) => {
+const selectBudget = (opt: { range: string; max: number | null }) => {
   props.input.budgetRange = opt.range
   props.input.budgetMax = opt.max
 }
@@ -227,8 +186,13 @@ const toggleExperience = (val: string) => {
 }
 
 const canProceed = computed(() => {
+  if (props.step === 1) return true
+  if (props.productMode === 'wing') {
+    if (props.step === 2) return !!props.input.windRange
+    return true
+  }
   if (props.step === 2) return !!props.input.weightRange
-  if (props.step === 4) return !!props.input.windRange
+  if (props.step === 3) return !!props.input.windRange
   if (props.step === 5) return !!props.input.transportPreference
   return true
 })
