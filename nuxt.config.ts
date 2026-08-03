@@ -2,8 +2,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/sitemap'
   ],
+
+  sitemap: {
+    strictNuxtContentPaths: true
+  },
 
   css: ['~/assets/css/main.css'],
 
