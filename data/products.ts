@@ -76,7 +76,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'Nocika SAS',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -140,7 +140,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'F2 Fun&Function Shop',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -202,7 +202,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'F2 Fun&Function Shop',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -264,7 +264,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'F2 Fun&Function Shop',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -325,7 +325,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'F2 Fun&Function Shop',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -379,13 +379,12 @@ export const products: WingfoilProduct[] = [
       merchant: 'decathlon',
       productId: '504e9065-3591-4ca1-a713-5e13596303ce',
       sourceUrl: 'https://www.decathlon.de/p/mp/pack-wingfoil-board-6-3-x-29-x-5-150l-mit-leash-l-xl/504e9065-3591-4ca1-a713-5e13596303ce/novar',
-      currentPrice: 359.99,
-      originalPrice: 749.99,
+      currentPrice: 749.99,
       currency: 'EUR',
       available: true,
       seller: 'HANA Outdoors',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -438,13 +437,12 @@ export const products: WingfoilProduct[] = [
       merchant: 'decathlon',
       productId: '33914cea-21c6-4d01-a763-7f14ce84e590',
       sourceUrl: 'https://www.decathlon.de/p/mp/pack-wingfoil-board-5-8-x-26-1-2-x-5-130l-mit-leash-l-xl/33914cea-21c6-4d01-a763-7f14ce84e590/novar',
-      currentPrice: 359.99,
-      originalPrice: 699.99,
+      currentPrice: 699.99,
       currency: 'EUR',
       available: true,
       seller: 'HANA Outdoors',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -501,7 +499,7 @@ export const products: WingfoilProduct[] = [
       available: true,
       seller: 'HANA Outdoors',
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -569,7 +567,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 899,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -631,7 +629,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 1359.99,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -696,7 +694,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 1386.99,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -760,7 +758,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 1422.99,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -837,7 +835,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 1399,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -909,9 +907,10 @@ export const products: WingfoilProduct[] = [
       merchant: 'amazon',
       productId: 'B0DN9VNGGW',
       sourceUrl: 'https://www.amazon.de/dp/B0DN9VNGGW?tag=wingfoil-empfehlung-21',
+      currentPrice: 1399.00,
       currency: 'EUR',
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -988,7 +987,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 579,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -1039,9 +1038,10 @@ export const products: WingfoilProduct[] = [
       merchant: 'amazon',
       productId: 'B0H3NY3DYM',
       sourceUrl: 'https://www.amazon.de/dp/B0H3NY3DYM?tag=wingfoil-empfehlung-21',
+      currentPrice: 1769.19,
       currency: 'EUR',
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -1099,7 +1099,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 1072.99,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -1166,9 +1166,10 @@ export const products: WingfoilProduct[] = [
         merchant: 'amazon',
         productId: 'B09C81WS1H',
         sourceUrl: 'https://www.amazon.de/dp/B09C81WS1H?tag=wingfoil-empfehlung-21',
+        currentPrice: 799.99,
         currency: 'EUR',
         available: false,
-        lastChecked: '2026-07-28'
+        lastChecked: '2026-08-04'
       },
       {
         merchant: 'amazon',
@@ -1234,7 +1235,7 @@ export const products: WingfoilProduct[] = [
       currency: 'EUR',
       currentPrice: 489.99,
       available: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -1304,9 +1305,9 @@ export const products: WingfoilProduct[] = [
       productId: 'B0GS9HWS9B',
       sourceUrl: 'https://www.amazon.de/dp/B0GS9HWS9B?tag=wingfoil-empfehlung-21',
       currency: 'EUR',
-      currentPrice: 399.99,
+      currentPrice: 349.99,
       available: false,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }],
     lastEditorialReview: '2026-07-28'
   },
@@ -1598,10 +1599,11 @@ export const products: WingfoilProduct[] = [
       merchant: 'decathlon',
       productId: '95b19192-6075-4619-b790-ce35c0d99532',
       sourceUrl: 'https://www.decathlon.de/p/mp/f2-set-foilboard-glide-strato-team-rot-110l-alu-foil-1700-wing-5qm/95b19192-6075-4619-b790-ce35c0d99532/c14',
+      currentPrice: 1399.00,
       currency: 'EUR',
       available: false,
       marketplaceOffer: true,
-      lastChecked: '2026-07-28'
+      lastChecked: '2026-08-04'
     }]
   }
 ]
