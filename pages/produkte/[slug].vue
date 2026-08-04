@@ -6,14 +6,14 @@
       <div class="grid lg:grid-cols-2 gap-12 mb-16">
         <!-- Left: Image -->
         <div>
-          <div class="aspect-[4/3] bg-sky rounded-2xl overflow-hidden flex items-center justify-center">
+          <div class="aspect-square bg-sky rounded-2xl overflow-hidden flex items-center justify-center">
             <img
               v-if="product.image"
               :src="product.image"
               :alt="product.imageAlt"
               class="w-full h-full object-cover"
               width="600"
-              height="450"
+              height="600"
             />
             <div v-else class="flex flex-col items-center gap-3 text-muted p-12 text-center">
               <svg class="w-20 h-20 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24">
